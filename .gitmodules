@@ -1,0 +1,9 @@
+[submodule "zagan/MenZ-TONE"]
+	path = zagan/MenZ-TONE
+	url = https://github.com/The-MenZ/MenZ-TONE.git
+[submodule "zagan/MenZ-COUNTDOWN"]
+	path = zagan/MenZ-COUNTDOWN
+	url = https://github.com/The-MenZ/MenZ-COUNTDOWN.git
+[submodule "zagan/MenZ-FLAG"]
+	path = zagan/MenZ-FLAG
+	url = https://github.com/The-MenZ/MenZ-FLAG.git

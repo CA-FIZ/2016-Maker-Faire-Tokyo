@@ -1,0 +1,119 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ドラガジェット</title>
+  <link rel="stylesheet" href="./dist/talkie.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+</head>
+<body>
+
+<div style="position:absolute;top:0;right:0;z-index:10000;">
+  <iframe src="http://dora.ktkne.st/" width="300" height="150"
+          style="transform:scale(0.5);transform-origin:right top">
+  </iframe>
+</div>
+
+<!-- put your slides -->
+
+<template layout="bullets" type="text/x-markdown">
+# <img src="./dist/image/icon.jpg" width="100" width="100" alt="" style="border-radius:50%;vertical-align:middle;"> @ktknest
+- 加藤 賢一
+- フロントエンドエンジニア
+- CyberAgent inc.
+- フィジカルコンピューティング
+- 社内でフィジ部つくりました
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+## フィジカルコンピューティング
+<i>われわれの身の回りの物理的な世界と<br>
+コンピュータ上の仮想的な世界との間に<br>
+対話を作り出すという分野。</i>
+
+<em><a href="http://artscape.jp/artword/index.php/フィジカル・コンピューティング">http://artscape.jp/artword/index.php/フィジカル・コンピューティング</a></em>
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+# ドラ
+<img src="./dist/image/10003065_1.jpg">
+
+<em><a href="http://www.rouishin.com/GOODSDETAIL-2600">http://www.rouishin.com/GOODSDETAIL-2600</a></em>
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+# ドラPepperくん
+<blockquote class="twitter-tweet" lang="ja"><p>スペシャルセッション待機中のpepperくん。ドラ娘ならぬドラpepperです！ <a href="https://twitter.com/hashtag/html5j?src=hash">#html5j</a> <a href="http://t.co/lP0ALGoo0V">pic.twitter.com/lP0ALGoo0V</a></p>&mdash; html5j (@html5j) <a href="https://twitter.com/html5j/status/559272033800830976">2015, 1月 25</a></blockquote>
+</template>
+
+<template layout="cover" invert type="text/x-markdown"
+          backface="./dist/image/dora01.jpg">
+# ドラガジェット
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+## ドラガジェット仕様
+- 指定時間が経過したら、ドラを自動的に鳴らす
+- リモート操作
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+## 参考
+### フィジカルWebアプリ「ち〜ん」
+<a href="http://qiita.com/tadfmac/items/702e74efad1dd606166a">http://qiita.com/tadfmac/items/702e74efad1dd606166a</a>
+<a href="http://www.slideshare.net/tadfmac/ss-39838345">http://www.slideshare.net/tadfmac/ss-39838345</a>
+
+@tadfmacさん、ありがとうございました m(__)m
+</template>
+
+<!--
+<template layout="bullets" type="text/x-markdown">
+## 使用パーツ＆技術
+- Arduino
+- ソレノイド（動力用）
+- ドラ代用品　→　鍋
+- MIDI（Web MIDI API）
+- Web Socket（Socket.IO）
+- サーバー（Express on Heroku）
+- etc.
+</template>
+-->
+
+<template layout="bullets" type="text/x-markdown">
+## 構成
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+<img src="./dist/image/structure.png">
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+## MIDI
+noteナンバー（音階）を使いわけて制御
+- 0x00 : 疎通確認（PC → Arduino）
+- 0x01 : 疎通確認（Arduino → PC）
+- 0x02 : カウントスタート
+- 0x03 : カウントストップ
+- 0x04 : ドラ叩く
+- 0x05 : ガジェット内のスイッチからのカウントON/OFF
+</template>
+
+<template layout="bullets" type="text/x-markdown">
+## Web Socket
+カウント状態を同期して共有
+- カウント中フラグ
+- 残り時間
+</template>
+
+<!--
+<template layout="bullets" type="text/x-markdown">
+## <a href="http://dora.ktkne.st/">http://dora.ktkne.st/</a>
+</template>
+-->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script src="./dist/talkie.js"></script>
+<script>Talkie({wide: false});</script>
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>

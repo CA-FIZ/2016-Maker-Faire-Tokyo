@@ -7,3 +7,6 @@
 [submodule "zagan/MenZ-FLAG"]
 	path = zagan/MenZ-FLAG
 	url = https://github.com/The-MenZ/MenZ-FLAG.git
+[submodule "r21nomi/capacitance-sensor"]
+	path = r21nomi/capacitance-sensor
+	url = git@github.com:r21nomi/capacitance-sensor.git
